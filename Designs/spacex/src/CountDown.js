@@ -16,14 +16,20 @@ class CountDownComponent extends Component {
         }
     }
 
+    componentDidMount(){
+
+        console.log(this.props.match.params.id);
+    }
+
     render(){
 
         return(
 
             <div>
-                
                 <h1>CountDown</h1>
-                
+                <div className='row'>
+                    <h1>{this.props.match.params.id}</h1>
+                </div>
             </div>
         );
     }

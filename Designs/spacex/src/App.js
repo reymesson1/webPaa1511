@@ -66,22 +66,24 @@ class App extends Component {
           <BrowserRouter>
             <NavbarComponent/>
 
-            <Routes>
-              <Route path="/" element={<NextLaunchesComponent 
-                    launches={this.state.launches} 
-              />
-              }/>
-              <Route 
-              path="/countdown/:id" 
-              location={this.props.location} 
-              render={({ 
-                  location, 
-                  match 
-              }) => (
-                  <CountDownComponent match={match}/>
-                  )}/>
 
-            </Routes>
+              <Route path="/" exact element= {<NextLaunchesComponent
+                    launches={this.state.launches}
+                />}
+              />
+
+              <Route 
+                path="/countdown/:id" 
+                location={this.props.location} 
+                render={({ 
+                    location, 
+                    match 
+                }) => (
+                    <CountDownComponent match={match} 
+                  />
+              )} 
+          />
+
 
           </BrowserRouter>
         </div>

@@ -50,7 +50,9 @@ class NextLaunchesComponent extends Component {
                             (data, index) => 
                                 <tr>
                                     <td>{index+1}</td>                                                    
-                                    <td>{data.mission_name}</td>                                                    
+                                    <td>                                        
+                                        <Link to={'/countdown/'+data.launch_site.site_id}>{data.mission_name}</Link>
+                                    </td>                                                    
                                     <td>{data.launch_date_local}</td>                                                    
                                     <td>{data.launch_site.site_name}</td>                                                    
                                 </tr>
